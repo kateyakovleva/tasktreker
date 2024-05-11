@@ -1,0 +1,42 @@
+<div class="elementContainer">
+  <h1>View Task</h1>
+  <div class="column">
+    <div class="row">
+      <label>заголовок</label>
+      <label class="title">{{task?.title}}</label>
+    </div>
+    <div class="row">
+      <label>название</label>
+      <label class="title">{{task?.name}}</label>
+    </div>
+    <div class="row">
+      <label>дедлайн</label>
+      <label class="title">{{task?.deadline}}</label>
+    </div>
+    <div class="row">
+      <label>приоритет</label>
+      <label class="title">{{priority(task?.priority)}}</label>
+    </div>
+  </div>
+  <form (submit)="submit($event)" class="column">
+    <div class="row">
+      <label>статус</label>
+      <ng-select
+        name="status"
+        [ngModel]="getDefaultSelect(task?.status, statuses)"
+        [items]="statuses"
+        (change)="changeSelect('status', $event)"
+      />
+    </div>
+    <div class="row margin-top">
+      <label>исполнители</label>
+      <ng-select
+        name="performerId"
+        [ngModel]="getDefaultSelect(task?.performerId, performers)"
+        [items]="performers"
+        (change)="changeSelect('performerId', $event)"
+      ></ng-select>
+    </div>
+    <button class="button-create">Сохранить</button>
+  </form>
+</div>

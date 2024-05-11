@@ -1,0 +1,31 @@
+<div class="row filter">
+  <div class="column">
+    <label>Статус</label>
+    <ng-select
+      name="status"
+      [ngModel]="getDefaultSelect(filter?.status, statuses)"
+      [items]="statuses"
+      (change)="change('status', $event)"
+    />
+  </div>
+  <div class="column">
+    <label>Исполнитель</label>
+    <ng-select
+      name="status"
+      [ngModel]="getDefaultSelect(filter?.performerId, statuses)"
+      [items]="performers"
+      (change)="change('performerId', $event)"
+    />
+  </div>
+  <div class="column">
+    <label>Дедлайн</label>
+    <input
+      class="input-name"
+      type="date"
+      (change)="change('deadline', $event.target)"
+      [value]="filter?.deadline"
+    />
+  </div>
+  <button>search</button>
+</div>
+

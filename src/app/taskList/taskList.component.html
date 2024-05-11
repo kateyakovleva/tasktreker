@@ -1,0 +1,26 @@
+<app-filter [filter]="filter"/>
+<table class="table">
+  <thead>
+  <tr>
+    <td style="width: 200px">Заголовок</td>
+    <td>Название</td>
+    <td>Дедлайн</td>
+    <td>Приоритет</td>
+    <td>Статус</td>
+    <td>Исполнители</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let task of getTasks()">
+    <td>
+      <a [routerLink]="'view_task/'+task.id">{{ task.title }}</a>
+    </td>
+    <td>{{ task.name }}</td>
+    <td>{{ task.deadline }}</td>
+    <td>{{ priority(task.priority) }}</td>
+    <td>{{ status(task.status) }}</td>
+    <td>{{ performer(task.performerId) }}</td>
+  </tr>
+  </tbody>
+</table>
+<a class="a" routerLink="create_task">Создать задачу</a>

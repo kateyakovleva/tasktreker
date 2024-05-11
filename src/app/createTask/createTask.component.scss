@@ -1,0 +1,34 @@
+.elementContainer {
+  width: 700px;
+}
+
+.column {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-create {
+  width: 139px;
+  height: 52px;
+  border-radius: 3px;
+  background-color: #FFE783 !important;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin-top: 20px;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0);
+  }
+}
+
+

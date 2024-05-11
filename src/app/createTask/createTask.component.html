@@ -1,0 +1,57 @@
+<form (ngSubmit)="submit($event)" class="elementContainer" ngNativeValidate>
+  <h1>Create Task</h1>
+  <div class="column width-70">
+    <div class="column">
+      <label>Заголовок</label>
+      <input
+        name="title"
+        class="input-name"
+        type="text"
+        [required]="true"
+      />
+    </div>
+    <div class="column">
+      <label>Название</label>
+      <input
+        name="name"
+        class="input-name"
+        type="text"
+        [required]="true"
+      />
+    </div>
+    <div class="column">
+      <label>Дедлайн</label>
+      <input
+        name="deadline"
+        class="input-name"
+        type="date"
+        [required]="true"
+      />
+    </div>
+    <div class="column">
+      <label>Приоритет</label>
+      <ng-select
+        [items]="priorities"
+        (change)="changeSelect('priority', $event)"
+        required
+      />
+    </div>
+    <div class="column">
+      <label>Статус</label>
+      <ng-select
+        [items]="statuses"
+        (change)="changeSelect('status', $event)"
+        required
+      />
+    </div>
+    <div class="column">
+      <label>Исполнители</label>
+      <ng-select
+        [items]="performers"
+        (change)="changeSelect('performerId', $event)"
+        required
+      />
+    </div>
+    <button class="button-create">Создать задачу</button>
+  </div>
+</form>

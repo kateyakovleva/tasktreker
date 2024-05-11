@@ -1,0 +1,18 @@
+.filter {
+  width: 1200px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &.row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px
+  }
+}

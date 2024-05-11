@@ -1,0 +1,155 @@
+@import "@ng-select/ng-select/scss/material.theme";
+
+.app {
+  font-family: 'PT Sans', sans-serif;
+  color: #000000;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  font-style: normal;
+  padding: 40px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+input {
+  height: 44px;
+  border: 1px solid #C3C3C3;
+  border-radius: 3px;
+  outline: none;
+  padding: 0 0 0 15px;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-70 {
+  width: 70%;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.ng-select::ng-deep {
+  width: 360px;
+  height: 44px;
+  border: 1px solid #C3C3C3;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-bottom: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ng-dropdown-panel {
+    left: 0;
+    width: 360px;
+  }
+
+  ng-dropdown-panel .scroll-host {
+    background-color: white;
+  }
+
+  .ng-dropdown-panel.ng-select-bottom {
+    top: 50px;
+    border-radius: 3px;
+    border-right: 1px solid #D7D7D7;
+    border-bottom: 1px solid #D7D7D7;
+    border-left: 1px solid #D7D7D7;
+  }
+
+  .ng-dropdown-panel.ng-select-top {
+    bottom: 50px;
+    border-radius: 3px;
+    border-top: 1px solid #D7D7D7;
+    border-right: 1px solid #D7D7D7;
+    border-bottom: 1px solid #D7D7D7;
+  }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected {
+    background: #696967;
+    color: black;
+  }
+
+  .ng-clear-wrapper {
+    display: none;
+  }
+
+  .ng-select-container {
+
+    &:after {
+      border-bottom: 0;
+    }
+
+    .ng-arrow-wrapper {
+      align-self: center;
+      bottom: 5px;
+      margin-right: 10px;
+
+      .ng-arrow {
+        transform: rotate(225deg);
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-right: 0;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+      }
+    }
+
+    .ng-value-container {
+      padding: 0;
+
+      .ng-input {
+        display: none;
+      }
+    }
+  }
+
+  .ng-option-marked {
+    &:hover {
+      background: #FFE783;
+    }
+  }
+}
+
+.a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 50px;
+}
